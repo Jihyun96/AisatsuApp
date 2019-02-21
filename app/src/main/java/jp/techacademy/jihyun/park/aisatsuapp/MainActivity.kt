@@ -4,19 +4,16 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 import android.app.TimePickerDialog
-import android.view.View
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button1.setOnClickListener(this)
-    }
-
-    override fun onClick(v: View){
-        showTimePickerDialog()
+        button1.setOnClickListener{
+            showTimePickerDialog()
+        }
     }
 
     private fun showTimePickerDialog() {
